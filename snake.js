@@ -57,7 +57,7 @@ function moveSnake(dx,dy) {
   const head = {x: snake[0].x + dx, y: snake[0].y + dy};
   snake.unshift(head);
   snake.pop();
-  //wraps the snake in case it goes off-screen
+  //wraps the snake in case it goes offscreen
   if(snake[0].x < 0){
     snake[0].x = 585;
   }
