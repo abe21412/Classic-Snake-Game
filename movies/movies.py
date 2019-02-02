@@ -5,7 +5,7 @@ r = requests.get(url)
 soup = BeautifulSoup(r.text, 'html.parser')
 script_tags = soup.find_all("script", src = None, class_ = None, type = None)
 
-#finds the script tag that contains the json with the movie information for new movies this week
+#finds the script tag that contains the json with the movie info for new movies this week
 #also cleans up the json by removing unnecessary whitespace and commas
 for tag in script_tags:
         if "synopsis" in tag.text:
